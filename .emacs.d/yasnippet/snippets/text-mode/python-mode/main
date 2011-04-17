@@ -1,0 +1,24 @@
+#! /usr/bin/python
+from __future__ import print_function
+import argparse
+import sys
+
+parser = argparse.ArgumentParser(usage="%(prog)s [options] args...")
+parser.add_argument("-v", "--verbose", action="store_true", default=False)
+
+def main(args):
+    $0
+    return 0
+
+################################## Boilerplate #################################
+_VERBOSE = False
+def log(msg, *args, **kwargs):
+    if _VERBOSE:
+        if args or kwargs:
+            msg = msg.format(*args, **kwargs)
+        print(msg, file=sys.stderr)
+
+if __name__ == '__main__':
+    args = parser.parse_args()
+    _VERBOSE = args.verbose
+    sys.exit(main(args))

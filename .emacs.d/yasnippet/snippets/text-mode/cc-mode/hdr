@@ -1,0 +1,15 @@
+#name : implementation for a .c/.h pair
+# --
+/* `(file-name-nondirectory (buffer-file-name))`
+ * Purpose: ${1:Header File}
+ */
+#ifndef ${2:__`(upcase (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`_H__}
+#define $1
+/****************************** included headers ******************************/
+
+/************************** data types and constants **************************/
+
+/**************************** function declarations ***************************/
+$0
+
+#endif /* $2 */

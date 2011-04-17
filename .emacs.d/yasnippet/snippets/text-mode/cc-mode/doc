@@ -1,0 +1,5 @@
+/`(make-string 79 ?*)`
+* Function: ${1: }
+* Purpose: ${2: }
+* Notes: ${3: }
+`(make-string 79 ?*)`/

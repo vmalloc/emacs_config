@@ -1,0 +1,1 @@
+(menu-bar-mode nil)

@@ -1,0 +1,8 @@
+#name : implementation for a .c/.h pair
+# --
+/****************************** included headers ******************************/
+#include "`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.h"
+
+
+/*************************** function implementation **************************/
+$0

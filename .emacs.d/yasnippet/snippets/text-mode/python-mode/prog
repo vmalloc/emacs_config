@@ -1,0 +1,20 @@
+import optparse
+
+parser = optparse.OptionParser("%prog [options]")
+
+class ProgramError(Exception):
+    def __init__(self, msg):
+        super(ProgramError, self).__init__()
+        self.msg = msg
+    def __str__(self):
+        return self.msg
+
+def main(options, args):
+    ${1:pass}
+
+
+if __name__ == '__main__':
+    try:
+        main(*parser.parse_args())
+    except ProgramError, e:
+        sys.exit(e.msg)

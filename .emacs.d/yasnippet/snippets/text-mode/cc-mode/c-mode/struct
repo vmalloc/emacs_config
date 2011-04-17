@@ -1,0 +1,4 @@
+typedef struct ${1:my_struct}_rec
+{
+    $0
+} $1_t;

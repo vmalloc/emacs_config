@@ -1,0 +1,6 @@
+.emacs.d/saveplace
+.emacs.d/tramp
+.emacs.d/anything-c-adaptive-history
+.emacs.d/ac-comphist.dat
+*.elc
+.bzr

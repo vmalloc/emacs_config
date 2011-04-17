@@ -1,0 +1,1 @@
+/${1:$(make-string (- (ceiling (/ (- 80.0 (string-width text)) 2)) 2) ?*)} ${1:title} ${1:$(make-string (- (floor (/ (- 80.0 (string-width text)) 2)) 2) ?*)}/
