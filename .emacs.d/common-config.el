@@ -1,8 +1,12 @@
+
 ;-----------------------;
 ; Emacs customization   ;
 ;-----------------------;
 ;(setq debug-on-error t)
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/modes")
+(add-to-list 'load-path "~/.emacs.d/utils")
+
 
 ; prevent dabbrev from replacing case
 (setq dabbrev-case-replace nil)
@@ -34,8 +38,7 @@
 ;-----------------------;
 ; Keyboard shortcuts    ;
 ;-----------------------;
-(load-file "~/.emacs.d/keyboard-shortcuts.el")
-
+(require 'keyboard-shortcuts)
 
 ; ido-mode
 (require 'ido)
@@ -58,8 +61,6 @@
 ;----------------------------;
 ; anything.el                ;
 ;----------------------------;
-(load "~/.emacs.d/anything.el")
-(load "~/.emacs.d/anything-config.el")
 (require 'anything)
 (require 'anything-config)
 (global-set-key [(control x) (a)] 'anything)

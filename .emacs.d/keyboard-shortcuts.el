@@ -53,3 +53,5 @@
       (setq show-trailing-whitespace t)
     )
 )
+
+(provide 'keyboard-shortcuts)

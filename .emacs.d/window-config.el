@@ -113,7 +113,7 @@
 ;----------------------------;
 ; haskell-mode               ;
 ;----------------------------;
-(add-to-list 'load-path "~/.emacs.d/haskell")
+(add-to-list 'load-path "~/.emacs.d/modes/haskell-mode")
 (require 'haskell-mode)
 (add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
 (autoload 'turn-on-haskell-ghci "haskell-ghci"
@@ -144,11 +144,6 @@
 ; Writing C/C++        ;
 ;----------------------;
 
-; enables quickly looking at prototypes
-(setq c-eldoc-includes "-I./ -I../ ")
-(load "c-eldoc")
-(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
-
 ; switch header/imp
 (add-hook 'c-mode-common-hook
   (lambda()
@@ -166,9 +161,6 @@
 (setq-default save-place t)                   ;; activate it for all buffers
 (require 'saveplace)                          ;; get the package
 
-; automatic installation
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -205,8 +197,9 @@
 ;--------------------------------------------
 ; nxhtml, javascript
 ;--------------------------------------------
-(load "javascript.el")
-(load "nxhtml/autostart.el")
+(add-to-list 'load-path "~/.emacs.d/modes/javascript-mode")
+(require 'javascript-mode)
+(load "~/.emacs.d/modes/nxhtml-mode/autostart.el")
 
 
 ;--------------------------------------------
