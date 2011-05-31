@@ -59,6 +59,7 @@
     )
 )
 
+(require 'dired)
 (define-key dired-mode-map (kbd "<C-S-up>") 'dired-up-directory)
 
 (provide 'keyboard-shortcuts)
