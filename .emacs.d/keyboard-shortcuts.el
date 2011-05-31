@@ -28,6 +28,11 @@
 (global-set-key [(control right)]         'forward-word)
 (global-set-key [(control left)]          'backward-word)
 
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
+
 (defun yy-other-window nil
   "Go to next window, but never one holding a minibuffer"
   (interactive)

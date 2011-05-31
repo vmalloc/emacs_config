@@ -45,6 +45,8 @@
 (ido-mode t)
 (setq ring-bell-function 'ignore)
 
+(require 'ido-recentf-open)
+
 ;----------------------------;
 ; Python                     ;
 ;----------------------------;
