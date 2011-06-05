@@ -129,3 +129,9 @@
 ; IRC                        ;
 ;----------------------------;
 (require 'rcirc)
+
+;----------------------------;
+; Swapping windows           ;
+;----------------------------;
+(require 'swap-windows)
+(global-set-key [(control x) (control t)] 'swap-windows)
