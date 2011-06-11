@@ -200,7 +200,6 @@
 (add-to-list 'load-path "~/.emacs.d/modes/javascript-mode")
 (require 'javascript-mode)
 (load "~/.emacs.d/modes/nxhtml-mode/autostart.el")
-(require 'mumamo-customization)
 (add-to-list 'load-path "~/.emacs.d/utils/jquery-doc")
 (require 'jquery-doc)
 

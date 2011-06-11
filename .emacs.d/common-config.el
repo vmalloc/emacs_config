@@ -144,3 +144,9 @@
 (add-hook 'cc-mode-hook 'linum-mode)
 
 (add-hook 'find-file-hooks 'hl-line-mode)
+
+
+;------------------------------------------------------------------------------;
+; Customization                                                                ;
+;------------------------------------------------------------------------------;
+(require 'customization)
