@@ -71,7 +71,6 @@
                '("\\.py\\'" flymake-pycodecheck-init)))
 
 ;(add-hook 'python-mode-hook 'flymake-mode)
-(add-hook 'python-mode-hook 'linum-mode)
 ;-----------------------;
 ; Additional Modes      ;
 ;-----------------------;

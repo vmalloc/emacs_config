@@ -135,3 +135,12 @@
 ;----------------------------;
 (require 'swap-windows)
 (global-set-key [(control x) (control t)] 'swap-windows)
+
+;------------------------------------------------------------------------------;
+; linum-mode                                                                   ;
+;------------------------------------------------------------------------------;
+(add-hook 'python-mode-hook 'linum-mode)
+(add-hook 'javascript-mode-hook 'linum-mode)
+(add-hook 'cc-mode-hook 'linum-mode)
+
+(add-hook 'find-file-hooks 'hl-line-mode)
