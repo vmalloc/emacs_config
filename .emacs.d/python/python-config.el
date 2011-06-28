@@ -76,3 +76,16 @@
 ;-----------------------;
 (load "~/.emacs.d/python/doctest-mode.el")
 (load "~/.emacs.d/python/django-mode.el")
+
+
+;-----------------------;
+; pdb                   ;
+;-----------------------;
+(setq pdb-command "python -m pdb")
+(setq pdb-path 'pdb-command)
+(setq gud-pdb-command-name (symbol-name pdb-path))
+(defadvice pdb (before gud-query-cmdline activate)
+   "Provide a better default command line when called interactively."
+   (interactive
+    (list (gud-query-cmdline pdb-path
+	 		    (file-name-nondirectory buffer-file-name)))))
