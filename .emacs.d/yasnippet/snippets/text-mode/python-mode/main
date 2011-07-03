@@ -18,7 +18,11 @@ def log(msg, *args, **kwargs):
             msg = msg.format(*args, **kwargs)
         print(msg, file=sys.stderr)
 
-if __name__ == '__main__':
+#### For use with entry_points/console_scripts
+def main_entry_point():
+    global _VERBOSE
     args = parser.parse_args()
     _VERBOSE = args.verbose
     sys.exit(main(args))
+if __name__ == '__main__':
+    main_entry_point()
