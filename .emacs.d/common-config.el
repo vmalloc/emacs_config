@@ -15,6 +15,7 @@
 ; Misc configuration    ;
 ;-----------------------;
 (setq x-select-enable-clipboard t)
+(scroll-bar-mode nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq auto-save-list-file-prefix nil)
 (setq-default indent-tabs-mode nil)
