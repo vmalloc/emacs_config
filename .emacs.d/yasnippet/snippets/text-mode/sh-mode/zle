@@ -1,0 +1,2 @@
+eval "$1() {zle push-line;LBUFFER+='$1';zle accept-line}"
+zle -N $1
