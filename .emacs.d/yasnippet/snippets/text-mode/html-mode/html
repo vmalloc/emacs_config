@@ -2,5 +2,17 @@
 #name : <html>...</html>
 # --
 <html>
+  <head>
+    <style>
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  </head>
+  <body>
   $0
+  </body>
+  <script type="text/javascript">
+  $(function() {
+  
+  });
+  </script>
 </html>
