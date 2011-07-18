@@ -27,6 +27,7 @@
 (if (boundp 'tool-bar-mode)
     (tool-bar-mode 0)
   )
+(add-to-list 'exec-path "/usr/local/bin")
 
 ;-----------------------------------------;
 ; Assume new files are always modified    ;
