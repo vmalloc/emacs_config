@@ -172,7 +172,8 @@
           ;;no errors, make the compilation window go away in 0.5 seconds
           (run-at-time 0.5 nil 'delete-windows-on buf)
           (message "NO COMPILATION ERRORS!"))))
-    
+(require 'xcscope)
+
 
 ;------------------------------------------------------------------------------;
 ; Customization                                                                ;
