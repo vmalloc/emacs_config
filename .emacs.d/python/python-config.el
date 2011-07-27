@@ -47,10 +47,19 @@
 
 (add-hook 'python-mode-hook 'bind-super-key)
 
-;----------------------------;
-; ipython-mode                ;
-;----------------------------;
+;------------------------------------------------------------------------------;
+; ipython-mode                                                                 ;
+;------------------------------------------------------------------------------;
 (require 'ipython)
+
+;------------------------------------------------------------------------------;
+; highlight trailing whitespaces                                               ;
+;------------------------------------------------------------------------------;
+(add-hook 'python-mode-hook
+   '(lambda()
+      (setq show-trailing-whitespace t)
+    )
+)
 
 ;----------------------------;
 ; pylint                     ;
@@ -71,12 +80,12 @@
                '("\\.py\\'" flymake-pycodecheck-init)))
 
 ;(add-hook 'python-mode-hook 'flymake-mode)
+
 ;-----------------------;
 ; Additional Modes      ;
 ;-----------------------;
 (load "~/.emacs.d/python/doctest-mode.el")
 (load "~/.emacs.d/python/django-mode.el")
-
 
 ;-----------------------;
 ; pdb                   ;

@@ -53,11 +53,6 @@
 (global-set-key [(shift f1)]             'kill-current-buffer)
 
 (global-set-key [(f12)] 'delete-trailing-whitespace)
-(add-hook 'python-mode-hook
-   '(lambda()
-      (setq show-trailing-whitespace t)
-    )
-)
 
 (require 'dired)
 (define-key dired-mode-map (kbd "<C-S-up>") 'dired-up-directory)
