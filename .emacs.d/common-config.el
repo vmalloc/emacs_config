@@ -142,11 +142,13 @@
 ;------------------------------------------------------------------------------;
 ; linum-mode                                                                   ;
 ;------------------------------------------------------------------------------;
+(setq linum-format "%3d")
 (add-hook 'python-mode-hook 'linum-mode)
 (add-hook 'javascript-mode-hook 'linum-mode)
 (add-hook 'js-mode-hook 'linum-mode)
 (add-hook 'cc-mode-hook 'linum-mode)
 
+; line highlighting mode
 (add-hook 'find-file-hooks 'hl-line-mode)
 
 ;------------------------------------------------------------------------------;
