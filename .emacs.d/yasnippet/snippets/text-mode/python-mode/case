@@ -1,7 +1,7 @@
-class $1(unittest.TestCase):
+class $1(${2:unittest.TestCase}):
     def setUp(self):
         super($1, self).setUp()
     def tearDown(self):
         super($1, self).tearDown()
-    def test__${2:something}(self):
-        ${3:raise unittest.SkipTest("Not implemented")}
+    def test__${3:something}(self):
+        ${4:self.skipTest("not implemented")}
