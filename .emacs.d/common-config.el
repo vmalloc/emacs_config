@@ -181,7 +181,8 @@
 ; ace-jump-mode (https://github.com/winterTTr/ace-jump-mode)                   ;
 ;------------------------------------------------------------------------------;
 (require 'ace-jump-mode)
-(define-key global-map (kbd "C-x j") 'ace-jump-mode)
+(define-key global-map (kbd "C-x j") 'ace-jump-char-mode)
+(setq ace-jump-mode-case-sensitive-search nil)
 
 ;------------------------------------------------------------------------------;
 ; Customization                                                                ;
