@@ -188,3 +188,9 @@
 ; Customization                                                                ;
 ;------------------------------------------------------------------------------;
 (require 'customization)
+
+(if (not (window-system))
+    (load-file "~/.emacs.d/terminal-config.el")
+    (load-file "~/.emacs.d/window-config.el")
+    )
+
