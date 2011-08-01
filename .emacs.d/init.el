@@ -194,3 +194,31 @@
     (load-file "~/.emacs.d/window-config.el")
     )
 
+;------------------------------------------------------------------------------;
+; Dektop mode                                                                  ;
+;------------------------------------------------------------------------------;
+(desktop-save-mode 1)
+(desktop-load-default)
+
+; automatically save
+(defun my-desktop-save ()
+    (interactive)
+    ;; Don't call desktop-save-in-desktop-dir, as it prints a message.
+    (if (eq (desktop-owner) (emacs-pid))
+        (desktop-save desktop-dirname)))
+(add-hook 'auto-save-hook 'my-desktop-save)
+
+; allow loading from 'locked' desktop files
+(setq desktop-load-locked-desktop t)
+
+; load previous
+(desktop-read)
+(add-hook 'kill-emacs-hook
+          '(lambda ()
+             (desktop-truncate search-ring 3)
+             (desktop-truncate regexp-search-ring 3)))
+
+; revive.el - used to restore frame configuration
+(require 'revive)
+(resume)
+(add-hook 'kill-emacs-hook 'save-current-configuration)
