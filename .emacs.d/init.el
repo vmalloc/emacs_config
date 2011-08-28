@@ -61,7 +61,7 @@
 (setq recentf-auto-cleanup 'never)
 (setq recentf-max-saved-items 1000)
 (recentf-mode 1)
-(add-hook 'find-file-hooks 'recentf-save-list)
+(run-with-timer 0 (* 5 60) 'recentf-save-list)
 
 ;----------------------------;
 ; anything.el                ;
