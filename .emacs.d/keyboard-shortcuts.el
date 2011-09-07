@@ -57,4 +57,7 @@
 (require 'dired)
 (define-key dired-mode-map (kbd "<C-S-up>") 'dired-up-directory)
 
+(require 'magit)
+(global-set-key [(f5)] 'magit-status)
+
 (provide 'keyboard-shortcuts)
