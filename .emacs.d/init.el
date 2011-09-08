@@ -195,6 +195,23 @@
     )
 
 ;------------------------------------------------------------------------------;
+; Underlining                                                                  ;
+;------------------------------------------------------------------------------;
+(defun underline-current-line (underline_char) (interactive "sChar: ")
+  (let (
+        (i 0)
+        )
+    (save-excursion
+      (setq length (- (line-end-position) (line-beginning-position)))
+      (forward-line 1)
+      (dotimes (i length)
+        (insert (if underline_char underline_char "-"))
+               )
+    )
+  )
+)
+
+;------------------------------------------------------------------------------;
 ; Dektop mode                                                                  ;
 ;------------------------------------------------------------------------------;
 (desktop-save-mode 1)
