@@ -84,16 +84,9 @@
 ;----------------------------;
 ; org-mode                   ;
 ;----------------------------;
-(setq my-org-dir "~/workspace/personal/documents/orgs")
-(setq my-work-org-file (concat my-org-dir "/work.org"))
-(setq my-personal-org-file (concat my-org-dir "/personal.org"))
-(global-set-key [(f5)] '(lambda () (interactive) (find-file my-work-org-file)))
-(global-set-key [(shift f5)] '(lambda () (interactive) (find-file my-personal-org-file)))
-
-(setq org-agenda-files (list my-work-org-file my-personal-org-file))
-(setq org-replace-disputed-keys t)
+(setq my-org-dir "~/workspace/synced/notes")
+;(setq org-replace-disputed-keys t)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(setq org-deadline-warning-days 5)
 
 ;----------------------------;
 ; tramp                      ;

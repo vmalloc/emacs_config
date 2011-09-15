@@ -72,6 +72,7 @@
 ;----------------------------;
 ; anything.el                ;
 ;----------------------------;
+(add-to-list 'load-path "~/.emacs.d/modes/anything")
 (require 'anything)
 (require 'anything-config)
 (global-set-key [(control x) (a)] 'anything)
@@ -83,18 +84,7 @@
              anything-c-source-recentf
              anything-c-source-file-name-history
              anything-c-source-occur
-             anything-c-source-fixme
-             anything-c-source-ctags
              anything-c-source-kill-ring
-;             anything-c-source-locate
-             anything-c-source-emacs-commands
-             ;anything-c-source-mac-spotlight
-             ; aweseome - find todo notes
-;             anything-c-source-buffer-not-found
-
-;             anything-c-source-info-pages
-;             anything-c-source-info-elisp
-;             anything-c-source-man-pages
              ))
 
 ;----------------------------;
