@@ -37,6 +37,12 @@
   (when (not (file-exists-p (buffer-file-name)))
     (set-buffer-modified-p t)))
 
+;-------------------------------------------
+; magit
+;-------------------------------------------
+(add-to-list 'load-path "~/.emacs.d/modes/magit")
+(require 'magit)
+
 ;-----------------------;
 ; Keyboard shortcuts    ;
 ;-----------------------;
@@ -121,12 +127,6 @@
 (global-auto-complete-mode t)
 (require 'auto-complete-config)
 (ac-config-default)
-
-;-------------------------------------------
-; magit
-;-------------------------------------------
-(add-to-list 'load-path "~/.emacs.d/magit")
-(require 'magit)
 
 ;----------------------------;
 ; IRC                        ;
