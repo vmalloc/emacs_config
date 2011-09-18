@@ -69,6 +69,14 @@
 (recentf-mode 1)
 (run-with-timer 0 (* 5 60) 'recentf-save-list)
 
+;------------------------------------------------------------------------------;
+; deft                                                                         ;
+;------------------------------------------------------------------------------;
+(add-to-list 'load-path "~/.emacs.d/modes/deft")
+(require 'deft)
+(setq deft-directory "~/workspace/synced/notes")
+(setq deft-extension "org")
+
 ;----------------------------;
 ; anything.el                ;
 ;----------------------------;

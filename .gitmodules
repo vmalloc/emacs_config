@@ -4,3 +4,6 @@
 [submodule ".emacs.d/modes/anything"]
 	path = .emacs.d/modes/anything
 	url = git://repo.or.cz/anything-config.git
+[submodule ".emacs.d/modes/deft"]
+	path = .emacs.d/modes/deft
+	url = git://jblevins.org/git/deft.git
