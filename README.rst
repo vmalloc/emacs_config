@@ -1,3 +1,9 @@
+Installation
+============
+Just clone, and update the submodules::
+
+ git submodule update --init
+
 Important Features
 ==================
 
