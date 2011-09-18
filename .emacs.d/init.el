@@ -76,6 +76,8 @@
 (require 'deft)
 (setq deft-directory "~/workspace/synced/notes")
 (setq deft-extension "org")
+(setq deft-text-mode 'org-mode)
+(define-key deft-mode-map [backspace] 'deft-filter-decrement)
 
 ;----------------------------;
 ; anything.el                ;
