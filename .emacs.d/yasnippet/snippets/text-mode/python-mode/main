@@ -1,6 +1,7 @@
 #! /usr/bin/python
 from __future__ import print_function
 import argparse
+import logging
 import sys
 
 parser = argparse.ArgumentParser(usage="%(prog)s [options] args...")
@@ -11,18 +12,18 @@ def main(args):
     return 0
 
 ################################## Boilerplate #################################
-_VERBOSE = False
-def log(msg, *args, **kwargs):
-    if _VERBOSE:
-        if args or kwargs:
-            msg = msg.format(*args, **kwargs)
-        print(msg, file=sys.stderr)
+def _configure_logging():
+    logging.basicConfig(
+        stream=sys.stderr,
+        level=logging.DEBUG,
+        format="%(asctime)s -- %(message)s"
+        )
 
 #### For use with entry_points/console_scripts
 def main_entry_point():
-    global _VERBOSE
     args = parser.parse_args()
-    _VERBOSE = args.verbose
+    if args.verbose:
+        _configure_logging()
     sys.exit(main(args))
 if __name__ == '__main__':
     main_entry_point()
