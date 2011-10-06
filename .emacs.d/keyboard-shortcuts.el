@@ -7,6 +7,7 @@
 (global-set-key [(meta g)]               'goto-line)
 (global-set-key [(f4)]                   'next-error)
 (global-set-key [(shift f4)]             'previous-error)
+(global-set-key [(control f9)]             'compile)
 (global-set-key [(control x) (meta r)]  'revert-buffer)
 
 (global-set-key [(control right-arrow)]  'end-of-line)
