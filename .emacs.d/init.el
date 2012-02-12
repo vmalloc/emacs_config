@@ -158,9 +158,6 @@
 (add-hook 'js-mode-hook 'linum-mode)
 (add-hook 'cc-mode-hook 'linum-mode)
 
-; line highlighting mode
-(add-hook 'find-file-hooks 'hl-line-mode)
-
 ;------------------------------------------------------------------------------;
 ; smex
 ;------------------------------------------------------------------------------;

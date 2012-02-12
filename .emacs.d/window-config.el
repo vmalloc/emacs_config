@@ -289,3 +289,6 @@
 (define-key drag-stuff-mode-map (kbd "ESC <down>") 'drag-stuff-down)
 (define-key drag-stuff-mode-map (kbd "<C-M-right>") 'drag-stuff-right)
 (define-key drag-stuff-mode-map (kbd "<C-M-left>") 'drag-stuff-left)
+
+; line highlighting mode
+(add-hook 'find-file-hooks 'hl-line-mode)
