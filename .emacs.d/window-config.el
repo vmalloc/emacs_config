@@ -181,6 +181,9 @@
             ("Programming" ;; prog stuff not already in MyProjectX
               (or
                 (mode . c-mode)
+                (mode . sh-mode)
+                (mode . c++-mode)
+                (mode . makefile-gmake-mode)
                 (mode . perl-mode)
                 (mode . python-mode)
                 (mode . emacs-lisp-mode)
